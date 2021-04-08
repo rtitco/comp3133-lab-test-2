@@ -1,5 +1,8 @@
 <div *ngIf="mission">
     <h2>{{mission.mission_name}} Details</h2>
+    <a routerLink="">
+        <button>Back</button>
+    </a>
     <div>
         <label for="mission-name">Name: </label>
         <label id="mission-name">{{mission.mission_name}}<br></label>

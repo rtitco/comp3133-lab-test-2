@@ -17,4 +17,9 @@ export class MissionService {
     const missions = of(MISSIONS);
     return missions;
   }
+
+  getMission(name: any): Observable<Mission> {
+    const mission = MISSIONS.find(m => m.mission_name === name) as Mission;
+    return of(mission);
+  }
 }

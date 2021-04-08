@@ -9,16 +9,11 @@ import { MissionService } from '../mission.service';
 })
 export class MissionlistComponent implements OnInit {
   missions: Mission[] = [];
-  selectedMission?: Mission;
 
   constructor(private missionService: MissionService) { }
 
   ngOnInit(): void {
     this.getMissions();
-  }
-
-  onSelect(mission: Mission): void {
-    this.selectedMission = mission;
   }
 
   getMissions(): void {

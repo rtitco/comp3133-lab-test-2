@@ -1,4 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { MissionService } from '../mission.service';
 import { Mission } from '../mission';
 
 @Component({
@@ -8,9 +12,20 @@ import { Mission } from '../mission';
 })
 export class MissiondetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private missionService: MissionService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    this.getMission();
+  }
+
+  getMission(): void {
+    const missionName = this.route.snapshot.paramMap.get('missionName');
+    this.missionService.getMission(missionName)
+    .subscribe(mission => this.mission = mission);
   }
 
   @Input() mission?: Mission;
