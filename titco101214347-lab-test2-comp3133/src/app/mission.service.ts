@@ -44,12 +44,10 @@ export class MissionService {
   //   return missions;
   // }
 
-  getMission(name: any): Observable<Mission> {
-    const url = `${this.REST_API_SERVER}/${name}`;
-    // const mission = MISSIONS.find(m => m.mission_name === name) as Mission;
-    // return of(mission);
+  getMission(flightNum: any): Observable<Mission> {
+    const url = `${this.REST_API_SERVER}/${flightNum}`;
     return this.httpClient.get<Mission>(url).pipe(
-      tap(_ => console.log(`found mission: ${name}`)),
+      tap(_ => console.log(`found mission: ${flightNum}`)),
       catchError(this.handleError)
     )
   }

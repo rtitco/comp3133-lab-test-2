@@ -23,8 +23,8 @@ export class MissiondetailsComponent implements OnInit {
   }
 
   getMission(): void {
-    const missionName = this.route.snapshot.paramMap.get('missionName');
-    this.missionService.getMission(missionName)
+    const flight_number = this.route.snapshot.paramMap.get('flightNum');
+    this.missionService.getMission(flight_number)
     .subscribe(mission => this.mission = mission);
   }
 

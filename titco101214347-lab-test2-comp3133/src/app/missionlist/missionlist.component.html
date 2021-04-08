@@ -1,7 +1,7 @@
 <ul class="missions">
     <li *ngFor="let mission of missions">
-        <a routerLink="/detail/{{mission.mission_name}}">
-            <span>{{mission.mission_name}}</span>, {{mission.launch_year}}
+        <a routerLink="/detail/{{mission.flight_number}}">
+            {{mission.flight_number}}<span>{{mission.mission_name}}</span>, {{mission.launch_year}}
         </a>
     </li>
 </ul>
