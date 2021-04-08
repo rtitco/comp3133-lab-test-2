@@ -1,0 +1,7 @@
+<ul class="missions">
+    <li *ngFor="let mission of missions" (click)="onSelect(mission)" [class.selected]="mission === selectedMission">
+        <span>{{mission.mission_name}}</span>, {{mission.launch_year}}
+    </li>
+</ul>
+
+<app-missiondetails [mission]="selectedMission"></app-missiondetails>

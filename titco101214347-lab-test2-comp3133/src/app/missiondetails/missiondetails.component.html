@@ -1,0 +1,16 @@
+<div *ngIf="mission">
+    <h2>{{mission.mission_name}} Details</h2>
+    <div>
+        <label for="mission-name">Name: </label>
+        <label id="mission-name">{{mission.mission_name}}<br></label>
+
+        <label for="mission-year">Launch Year: </label>
+        <label id="mission-year">{{mission.launch_year}}<br></label>
+
+        <label for="mission-detail">Details: </label>
+        <label id="mission-detail">{{mission.details}}<br></label>
+
+        <label for="mission-patch">Mission Patch: </label>
+        <label id="mission-patch">{{mission.mission_patch_small}}<br></label>
+    </div>
+</div>
