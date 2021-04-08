@@ -28,5 +28,9 @@ export class MissiondetailsComponent implements OnInit {
     .subscribe(mission => this.mission = mission);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
   @Input() mission?: Mission;
 }
