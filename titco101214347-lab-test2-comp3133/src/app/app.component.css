@@ -1,0 +1,26 @@
+.page-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    background-color: #c5dca0;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.component-container{
+    content: flex;
+}
+
+.page-title {
+    font-size: 2em;
+}
+
+.student-info{
+    font-size: 1em;
+}

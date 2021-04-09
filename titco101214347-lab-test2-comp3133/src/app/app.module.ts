@@ -9,6 +9,11 @@ import { MissionlistComponent } from './missionlist/missionlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MissiondetailsComponent } from './missiondetails/missiondetails.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +24,11 @@ import { MissiondetailsComponent } from './missiondetails/missiondetails.compone
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

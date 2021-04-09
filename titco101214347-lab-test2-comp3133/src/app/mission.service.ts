@@ -7,7 +7,6 @@ import { retry, catchError, map, tap } from 'rxjs/operators';
 
 //import Interface and Data
 import { Mission } from './mission';
-import { MISSIONS } from './mission-data';
 import { error } from 'selenium-webdriver';
 
 @Injectable({
@@ -38,11 +37,6 @@ export class MissionService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-
-  // getMissions(): Observable<Mission[]> {
-  //   const missions = of(MISSIONS);
-  //   return missions;
-  // }
 
   getMission(flightNum: any): Observable<Mission> {
     const url = `${this.REST_API_SERVER}/${flightNum}`;

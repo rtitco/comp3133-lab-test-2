@@ -1,7 +1,16 @@
-<ul class="missions">
-    <li *ngFor="let mission of missions">
-        <a routerLink="/detail/{{mission.flight_number}}">
-            {{mission.flight_number}}<span>{{mission.mission_name}}</span>, {{mission.launch_year}}
+<mat-list class="missions-list">
+    <mat-list-item *ngFor="let mission of missions" class="list-item">
+
+        <a routerLink="/detail/{{mission.flight_number}}" class="list-router">
+            <mat-card class="card-styling">
+
+                <div class="card-data">
+                    <div><label>{{mission.mission_name}}</label></div>
+                    <div><label>{{mission.launch_year}}</label></div>
+                </div>
+
+            </mat-card>
         </a>
-    </li>
-</ul>
+        
+    </mat-list-item>
+</mat-list>
